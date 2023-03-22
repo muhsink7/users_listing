@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
+import 'package:users_listing/screens/gridview_screen.dart';
 import 'package:users_listing/screens/usersList_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -106,7 +107,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   onPressed: () {
                     login(emailController.text.toString(), passwordController.text.toString());
-                    Navigator.pushNamed(context, UsersList.id);
+                    Navigator.pushNamed(context, GridViewScreen.id);
                   },
 
                   child: const Text('Login',
